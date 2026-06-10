@@ -586,16 +586,21 @@ html[lang="zh"] .form-field label{font-family:'Noto Sans SC',sans-serif;text-tra
 /* ─── MOBILE POLISH ─── */
 @media(max-width:768px){
   .quote{padding:80px 0;}
-  .services,.team-sec,.ins,.focus,.cta-sec{padding:80px 0;}
+  .services,.team-sec,.ins,.focus,.cta-sec,.ap-svc{padding:80px 0;}
   .cta-sec{padding:100px 0 72px;}
-  .cta-sec h2{margin-bottom:36px;}
+  .cta-sec h2{margin-bottom:36px;font-size:clamp(32px,8vw,48px);}
   .ph{padding:120px 0 56px;}
+  .ph-h{font-size:clamp(32px,8vw,52px);}
   .stats{padding:80px 0;}
   .stats-hd{margin-bottom:40px;}
   .stats-hd h2{font-size:clamp(28px,7vw,42px);}
-  .mbtn{padding:16px 28px;font-size:14px;width:100%;max-width:320px;justify-content:center;}
+  .snum{font-size:clamp(40px,12vw,64px);}
+  .mbtn{padding:16px 28px;font-size:14px;width:100%;max-width:100%;justify-content:center;}
   .ft-bot{flex-direction:column;gap:12px;text-align:center;}
   .ft-bot a{margin-left:0;}
+  .fp-grid{padding:48px 0;}
+  .full-team{padding:64px 0;}
+  .ins-pg{padding:48px 0;}
 }
 @media(max-width:480px){
   .tzgrid{grid-template-columns:1fr;}
