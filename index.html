@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BioArch · 拜驰生物医药</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800&family=Noto+Sans+SC:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<!-- cursor -->
+<div class="cur" id="cur"></div>
+<!-- scroll progress -->
+<div class="spb" id="spb"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nv">
+    <a href="#" class="logo" onclick="showPage('home');return false;">
+      <svg class="logo-icon" viewBox="0 0 28 28" fill="none">
+        <path d="M4 26V13C4 7.5 8.5 3.5 14 3.5C19.5 3.5 24 7.5 24 13V26" stroke="#1C1915" stroke-width="2" stroke-linecap="round" fill="none"/>
+        <line x1="4" y1="26" x2="24" y2="26" stroke="#1D52E8" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+      BioArch
+    </a>
+    <div class="nl">
+      <a href="#" onclick="showPage('approach');return false;" data-page="approach" data-i18n="nav.approach">Approach</a>
+      <a href="#" onclick="showPage('focus');return false;" data-page="focus" data-i18n="nav.focus">Therapeutic Focus</a>
+      <a href="#" onclick="showPage('insights');return false;" data-page="insights" data-i18n="nav.insights">Insights</a>
+      <a href="#" onclick="showPage('about');return false;" data-page="about" data-i18n="nav.about">About</a>
+      <a href="#" onclick="showPage('contact');return false;" class="ncta" data-i18n="nav.cta">Begin a conversation</a>
+      <div class="lsw">
+        <button class="lb on" data-lang="en" onclick="setLang('en')">EN</button>
+        <button class="lb" data-lang="zh" onclick="setLang('zh')">中</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════ HOME ═══════════════════════════════════════ -->
+<div id="page-home" class="page active">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="ct">
+      <div class="hero-grid">
+        <div>
+          <span class="eyebrow hero-ey" data-i18n="hero.ey">/ Cross-Border Biotech Advisory · Est. 2026</span>
+          <h1 class="display hero-h">
+            <span class="hero-line"><span data-i18n-span="hero.l1">Where US innovation</span></span>
+            <span class="hero-line"><span data-i18n-span="hero.l2">meets China's</span></span>
+            <span class="hero-line"><span><strong data-i18n-span="hero.l3">accelerated</strong></span></span>
+            <span class="hero-line"><span data-i18n-span="hero.l4">pathways.</span></span>
+          </h1>
+          <div class="hero-meta">
+            <p class="hero-sub" data-i18n="hero.sub">BioArch is a specialist advisory firm helping US biotech innovators bring breakthrough therapies to Chinese patients — through Hainan Lecheng's real-world study pathway, augmented by AI intelligence.</p>
+            <div class="sig">
+              <span><span class="sdot"></span><strong data-i18n="hero.s1">Partner-led engagements</strong></span>
+              <span><span class="sdot" style="background:transparent;box-shadow:none;animation:none;"></span><strong data-i18n="hero.s2">NDA-first conversations</strong></span>
+              <span><span class="sdot" style="background:transparent;box-shadow:none;animation:none;"></span><strong data-i18n="hero.s3">Response within 24 hours</strong></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- Decorative arch -->
+    <svg class="hero-arch" viewBox="0 0 540 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M40 380 V200 C40 110, 130 40, 270 40 C410 40, 500 110, 500 200 V380" stroke="currentColor" stroke-width="1" fill="none"/>
+      <path d="M95 380 V210 C95 140, 175 80, 270 80 C365 80, 445 140, 445 210 V380" stroke="currentColor" stroke-width="1" fill="none"/>
+      <path d="M150 380 V220 C150 170, 210 120, 270 120 C330 120, 390 170, 390 220 V380" stroke="currentColor" stroke-width="1" fill="none"/>
+      <path d="M205 380 V230 C205 200, 235 160, 270 160 C305 160, 335 200, 335 230 V380" stroke="currentColor" stroke-width="1" fill="none"/>
+      <line x1="20" y1="380" x2="520" y2="380" stroke="currentColor" stroke-width="1.5"/>
+    </svg>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats" data-rev>
+    <div class="ct">
+      <div class="stats-hd">
+        <span class="eyebrow" data-i18n="stats.ey">/ Market Context · Q2 2026</span>
+        <h2 class="display" data-i18n-h="stats.h">The pace of opening is <strong>unprecedented.</strong></h2>
+      </div>
+      <div class="stat-grid">
+        <div class="stat">
+          <div class="snum" data-count="9" data-suf="mo"><span class="snum-val">9</span><span class="snum-unit">mo</span></div>
+          <p class="slabel" data-i18n="stats.l1">From foreign approval to Chinese patients via the Lecheng pathway — vs. 3–5 years through traditional NMPA.</p>
+          <div class="ssrc" data-i18n="stats.src1">Boao Lecheng Authority</div>
+        </div>
+        <div class="stat">
+          <div class="snum"><span class="snum-val">$135</span><span class="snum-unit">.7B</span></div>
+          <p class="slabel" data-i18n="stats.l2">China biotech outbound licensing in 2025 — exceeding the R&D budgets of several global top-10 pharmas combined.</p>
+          <div class="ssrc" data-i18n="stats.src2">VLS Research 2026</div>
+        </div>
+        <div class="stat">
+          <div class="snum"><span class="snum-val">30</span><span class="snum-unit">%</span></div>
+          <p class="slabel" data-i18n="stats.l3">Of all novel drug candidates in global clinical development now originate from Chinese-headquartered companies.</p>
+          <div class="ssrc" data-i18n="stats.src3">Industry Composite</div>
+        </div>
+        <div class="stat">
+          <div class="snum"><span class="snum-val">47</span><span class="snum-unit">+</span></div>
+          <p class="slabel" data-i18n="stats.l4">Foreign drugs and devices in the Lecheng RWS pilot — with 25+ already accelerated to full NMPA approval.</p>
+          <div class="ssrc" data-i18n="stats.src4">NMPA Q1 2026</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOUSE VIEW -->
+  <section class="quote" data-rev>
+    <div class="ct"><div class="quote-inner">
+      <div class="quote-ey"><span class="eyebrow" data-i18n="qte.ey">/ House View</span></div>
+      <p class="qt" data-i18n-h="qte.t">The next breakthroughs in oncology, metabolic disease, and rare conditions <strong>won't be invented in one place.</strong> They will be built across the gap between US scientific origination and Chinese clinical execution. We close that gap.</p>
+      <div class="q-attr" data-i18n="qte.attr">From the firm · BioArch · 拜驰生物医药</div>
+    </div></div>
+  </section>
+
+  <!-- SERVICES OVERVIEW -->
+  <section class="services" data-rev>
+    <div class="ct">
+      <div class="svc-hd">
+        <div>
+          <span class="eyebrow" data-i18n="svc.ey">/ Approach</span>
+          <h2 class="display" data-i18n-h="svc.h">A bridge made of <strong>three spans.</strong></h2>
+        </div>
+        <p class="svc-intro" data-i18n="svc.intro">We do three things — and we do them with senior people in the room. Every engagement is partner-led from first call through close. No junior hand-offs.</p>
+      </div>
+      <div class="svc-grid">
+        <div class="scard" onclick="showPage('approach')">
+          <div class="sc-num">01 — <span data-i18n="s1.num">Pathfinding</span></div>
+          <h3 class="sc-title" data-i18n="s1.title">Pathfinding</h3>
+          <p class="sc-sub" data-i18n="s1.sub">From an FDA-cleared asset to a Chinese patient — by the fastest defensible route.</p>
+          <ul class="sc-bul">
+            <li><span class="bm">→</span><span data-i18n="s1.b1">Lecheng pre-communication & RWS strategy</span></li>
+            <li><span class="bm">→</span><span data-i18n="s1.b2">NMPA filing & regulatory roadmap</span></li>
+            <li><span class="bm">→</span><span data-i18n="s1.b3">Multi-center GCP trial design</span></li>
+          </ul>
+          <span class="sc-arr">↗</span>
+        </div>
+        <div class="scard" onclick="showPage('approach')">
+          <div class="sc-num">02 — <span data-i18n="s2.num">Connection</span></div>
+          <h3 class="sc-title" data-i18n="s2.title">Connection</h3>
+          <p class="sc-sub" data-i18n="s2.sub">The relationships you'd take 18 months to build yourself — already warm and on the table.</p>
+          <ul class="sc-bul">
+            <li><span class="bm">→</span><span data-i18n="s2.b1">Tier-3A hospital networks in Lecheng</span></li>
+            <li><span class="bm">→</span><span data-i18n="s2.b2">CRO partners: PPD, Triapex, Pharmaron</span></li>
+            <li><span class="bm">→</span><span data-i18n="s2.b3">NMPA Lecheng research bureau access</span></li>
+          </ul>
+          <span class="sc-arr">↗</span>
+        </div>
+        <div class="scard" onclick="showPage('approach')">
+          <div class="sc-num">03 — <span data-i18n="s3.num">Intelligence</span></div>
+          <h3 class="sc-title" data-i18n="s3.title">Intelligence</h3>
+          <p class="sc-sub" data-i18n="s3.sub">AI-augmented matching of assets to indications, patient populations, and clinical sites.</p>
+          <ul class="sc-bul">
+            <li><span class="bm">→</span><span data-i18n="s3.b1">Indication & patient population modeling</span></li>
+            <li><span class="bm">→</span><span data-i18n="s3.b2">Comparable deal benchmarking</span></li>
+            <li><span class="bm">→</span><span data-i18n="s3.b3">RWD structuring for NMPA acceptance</span></li>
+          </ul>
+          <span class="sc-arr">↗</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THERAPEUTIC FOCUS (dark) -->
+  <section class="focus" data-rev>
+    <div class="ct">
+      <div class="focus-hd">
+        <span class="eyebrow" data-i18n="fcs.ey">/ Therapeutic Focus</span>
+        <h2 class="display" data-i18n-h="fcs.h">Where our network runs <strong>deepest.</strong></h2>
+      </div>
+      <div class="fgrid">
+        <div class="farea"><div class="f-num">/ 01</div><h3 class="f-title" data-i18n="f1.t">siRNA &<br>Nucleic Acid</h3><p class="f-detail" data-i18n="f1.d">Long-acting GalNAc platforms. ATTR-CM, refractory hypertension, hypercholesterolemia.</p></div>
+        <div class="farea"><div class="f-num">/ 02</div><h3 class="f-title" data-i18n="f2.t">Cell &<br>Gene Therapy</h3><p class="f-detail" data-i18n="f2.d">CAR-T, allogeneic platforms, gene-edited organ replacement. Anchored in Lecheng's biomedical new-tech channel.</p></div>
+        <div class="farea"><div class="f-num">/ 03</div><h3 class="f-title" data-i18n="f3.t">Metabolic<br>& Obesity</h3><p class="f-detail" data-i18n="f3.d">Oral GLP-1, dual & triple agonists, next-gen combinations. Built on a 50,000+ patient outcomes database.</p></div>
+        <div class="farea"><div class="f-num">/ 04</div><h3 class="f-title" data-i18n="f4.t">Cardio-<br>vascular</h3><p class="f-detail" data-i18n="f4.d">Renal denervation, AGT-targeted antihypertensives, lipid-lowering siRNAs.</p></div>
+        <div class="farea"><div class="f-num">/ 05</div><h3 class="f-title" data-i18n="f5.t">Oncology<br>& Rare</h3><p class="f-detail" data-i18n="f5.d">Targeted therapies where the US-China clinical data complement is highest.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM TEASER -->
+  <section class="team-sec" data-rev>
+    <div class="ct">
+      <div class="tm-hd">
+        <div><span class="eyebrow" data-i18n="tm.ey">/ The Partnership</span><h2 class="display" data-i18n-h="tm.h">A team that has been on <strong>both sides</strong> of the table.</h2></div>
+        <p class="tm-intro" data-i18n="tm.intro">A practicing physician at a leading Beijing hospital. A scientific affairs leader at a global CRO. A Lecheng government-relations operator. A pharma-financing executive with two decades of cross-border experience.</p>
+      </div>
+      <div class="tgrid">
+        <div class="tcard" onclick="showPage('about')">
+          <div class="t-role" data-i18n="tm1.role">Chief Medical Officer</div>
+          <h3 class="t-name" data-i18n="tm1.name">Dr. Zhong Zhaohui</h3>
+          <p class="t-bg" data-i18n="tm1.bg">Attending surgeon at Peking University People's Hospital for 20+ years. Laparoscopic surgery expert. One of China's largest metabolic surgery outcomes databases.</p>
+        </div>
+        <div class="tcard" onclick="showPage('about')">
+          <div class="t-role" data-i18n="tm2.role">Chair, US Operations</div>
+          <h3 class="t-name" data-i18n="tm2.name">Cindy Zhang</h3>
+          <p class="t-bg" data-i18n="tm2.bg">Former Microsoft enterprise lead. Led US-to-China clinical development of a rare-disease therapeutic. Pharma BD and cross-border financing.</p>
+        </div>
+        <div class="tcard" onclick="showPage('about')">
+          <div class="t-role" data-i18n="tm3.role">Chief Scientist · US</div>
+          <h3 class="t-name" data-i18n="tm3.name">Ivy Fu</h3>
+          <p class="t-bg" data-i18n="tm3.bg">Senior scientific affairs at a global CRO/CDMO. Direct line into late-stage US biotechs commercializing siRNA, cell, and gene therapies.</p>
+        </div>
+      </div>
+      <div style="margin-top:28px;text-align:right;">
+        <a href="#" onclick="showPage('about');return false;" style="font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--ink3);text-decoration:none;" data-i18n="tm.more">View full team →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSIGHTS PREVIEW -->
+  <section class="ins" data-rev>
+    <div class="ct">
+      <div class="ins-hd">
+        <div><span class="eyebrow" data-i18n="ins.ey">/ Insights</span><h2 class="display" data-i18n-h="ins.h">From <strong>the desk.</strong></h2></div>
+        <a href="#" onclick="showPage('insights');return false;" class="ins-more" data-i18n="ins.more">All insights →</a>
+      </div>
+      <div class="igrid">
+        <div class="icard feat">
+          <div class="i-meta"><span class="i-tag" data-i18n="i1.tag">Featured Report</span><span class="i-date">JUN 2026 · 14 MIN</span></div>
+          <h3 class="i-title" data-i18n="i1.title">The Lecheng Real-World Study pathway: an operator's field guide for US biotechs in 2026</h3>
+          <p class="i-exc" data-i18n="i1.exc">A practical, document-by-document map of how a Phase II-ready asset moves from a US data package to enrolled Chinese patients in nine months — and the four places this pathway most commonly fails.</p>
+          <span class="i-cta" data-i18n="i1.cta">Continue reading →</span>
+        </div>
+        <div class="icard">
+          <div class="i-meta"><span class="i-tag" data-i18n="i2.tag">Pipeline</span><span class="i-date">MAY 2026</span></div>
+          <h3 class="i-title" data-i18n="i2.title">Nucresiran in China: what next-gen ATTR siRNA means for Phase III strategy</h3>
+          <p class="i-exc" data-i18n="i2.exc">The third-generation TTR silencer is in Phase III trials inside China. We map the realistic timeline to NMPA NDA.</p>
+        </div>
+        <div class="icard">
+          <div class="i-meta"><span class="i-tag" data-i18n="i3.tag">Market Brief</span><span class="i-date">MAY 2026</span></div>
+          <h3 class="i-title" data-i18n="i3.title">Oral GLP-1 in Greater China: late-stage assets seeking partnership</h3>
+          <p class="i-exc" data-i18n="i3.exc">Seven domestic developers. Three foreign incumbents. A market that doesn't behave like the US one. Mapped.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-sec">
+    <div class="ct">
+      <h2 class="display" data-i18n-h="cta.h">Begin a <strong>confidential</strong> conversation.</h2>
+      <a href="#" onclick="showPage('contact');return false;" class="mbtn" id="ctaBtn">
+        <span data-i18n="cta.btn">Speak with a partner</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <div class="cta-meta" data-i18n="cta.meta">Response within 24 hours · NDA-first · Partner-led</div>
+    </div>
+  </section>
+
+  <!-- FOOTER (home) -->
+  <footer id="footer-home">
+    <div class="ct">
+      <div class="tzgrid">
+        <div><div class="tz-city" data-i18n="tz.det">Detroit</div><div class="tz-time" id="tz1">—</div><div class="tz-off">EST · UTC −05</div></div>
+        <div><div class="tz-city" data-i18n="tz.bos">Boston</div><div class="tz-time" id="tz2">—</div><div class="tz-off">EST · UTC −05</div></div>
+        <div><div class="tz-city" data-i18n="tz.bj">Beijing</div><div class="tz-time" id="tz3">—</div><div class="tz-off">CST · UTC +08</div></div>
+        <div><div class="tz-city" data-i18n="tz.lc">Boao · Lecheng</div><div class="tz-time" id="tz4">—</div><div class="tz-off">CST · UTC +08</div></div>
+      </div>
+      <div class="ft-grid">
+        <div><div class="ft-logo">BioArch</div><p class="ft-tag" data-i18n="ft.tag">A cross-border biotech advisory firm. We link US innovation to Chinese clinical execution — anchored in Hainan Lecheng.</p></div>
+        <div class="ft-col"><div class="ft-col-t" data-i18n="fc1.t">Approach</div><ul>
+          <li><a href="#" onclick="showPage('approach');return false;" data-i18n="fc1.a">Pathfinding</a></li>
+          <li><a href="#" onclick="showPage('approach');return false;" data-i18n="fc1.b">Connection</a></li>
+          <li><a href="#" onclick="showPage('approach');return false;" data-i18n="fc1.c">Intelligence</a></li>
+        </ul></div>
+        <div class="ft-col"><div class="ft-col-t" data-i18n="fc2.t">Company</div><ul>
+          <li><a href="#" onclick="showPage('about');return false;" data-i18n="fc2.a">About</a></li>
+          <li><a href="#" onclick="showPage('about');return false;" data-i18n="fc2.b">The team</a></li>
+          <li><a href="#" onclick="showPage('focus');return false;" data-i18n="fc2.c">Therapeutic focus</a></li>
+        </ul></div>
+        <div class="ft-col"><div class="ft-col-t" data-i18n="fc3.t">Intelligence</div><ul>
+          <li><a href="#" onclick="showPage('insights');return false;" data-i18n="fc3.a">Lecheng Brief</a></li>
+          <li><a href="#" onclick="showPage('insights');return false;" data-i18n="fc3.b">Pacific Pipeline</a></li>
+          <li><a href="#" onclick="showPage('insights');return false;" data-i18n="fc3.c">All Insights</a></li>
+        </ul></div>
+        <div class="ft-col"><div class="ft-col-t" data-i18n="fc4.t">Connect</div><ul>
+          <li><a href="mailto:hello@bioarch.bio">hello@bioarch.bio</a></li>
+          <li><a href="#" data-i18n="fc4.b">LinkedIn</a></li>
+          <li><a href="#" onclick="showPage('contact');return false;" data-i18n="fc4.c">Press</a></li>
+        </ul></div>
+      </div>
+      <div class="ft-bot">
+        <div>© 2026 BioArch · 拜驰生物医药</div>
+        <div><a href="#" data-i18n="ft.terms">Terms</a><a href="#" data-i18n="ft.priv">Privacy</a></div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ═══════════════════════ APPROACH PAGE ═══════════════════════ -->
+<div id="page-approach" class="page">
+  <div class="ph">
+    <div class="ct">
+      <div class="ph-ey"><span class="eyebrow" data-i18n="ap.ey">/ Approach</span></div>
+      <h1 class="display ph-h" data-i18n-h="ap.h">Beyond services,<br>we design <strong>paths.</strong></h1>
+      <p class="ph-sub" data-i18n="ap.sub">We transcend traditional consulting by architecting high-velocity pathways for global medical innovations into the Chinese healthcare ecosystem. Every engagement is partner-led, NDA-protected, and purpose-built for your asset.</p>
+    </div>
+  </div>
+
+  <!-- Service 01 — Pathfinding (light) -->
+  <section class="ap-svc" data-rev>
+    <div class="ct">
+      <div class="ap-row">
+        <div class="ap-content">
+          <div class="ap-num">01</div>
+          <div class="ap-tag" data-i18n="ap1.label">01 / Pathfinding</div>
+          <h2 class="ap-h" data-i18n="ap1.h">From FDA clearance to Chinese patient — the fastest defensible route.</h2>
+          <p class="ap-desc" data-i18n="ap1.desc">We navigate every checkpoint between a US regulatory approval and a Chinese patient receiving your therapy. Starting with the Hainan Lecheng Pilot Zone — where the 9-month real-world study pathway can bypass 3–5 years of traditional NMPA review — we map the precise regulatory sequence for your asset's profile.</p>
+          <ol class="ap-steps">
+            <li><div class="ap-step-n">STEP 01</div><div class="ap-step-b"><strong data-i18n="ap1.s1t">Lecheng Pre-Communication & RWS Design</strong><span data-i18n="ap1.s1d">Early access validation within the Hainan Pilot Zone. We facilitate the pre-communication with Lecheng Medical Products Administration Bureau and the 真研院 (Lecheng Clinical Research Institute) to de-risk the pathway before any formal filing.</span></div></li>
+            <li><div class="ap-step-n">STEP 02</div><div class="ap-step-b"><strong data-i18n="ap1.s2t">NMPA Strategy & Regulatory Roadmap</strong><span data-i18n="ap1.s2d">Precise regulatory mapping tailored to your therapeutic's profile and risk classification. We design the dual-track RWS-to-NMPA submission plan, including bridging study requirements and CMC data harmonization.</span></div></li>
+            <li><div class="ap-step-n">STEP 03</div><div class="ap-step-b"><strong data-i18n="ap1.s3t">Multi-Center Trial Execution</strong><span data-i18n="ap1.s3d">Real-world study implementation at Grade-3A hospital sites licensed within Lecheng. Site selection, protocol translation, and GCP compliance — run by partners with direct site access.</span></div></li>
+          </ol>
+        </div>
+        <div class="ap-visual">
+          <svg viewBox="0 0 240 440" xmlns="http://www.w3.org/2000/svg" style="max-width:240px;">
+            <!-- Vertical timeline -->
+            <line x1="50" y1="40" x2="50" y2="400" stroke="rgba(15,23,42,.15)" stroke-width="1" stroke-dasharray="3,4"/>
+            <!-- Start node -->
+            <circle cx="50" cy="40" r="6" fill="none" stroke="#0F172A" stroke-width="1.5"/>
+            <text x="68" y="44" font-family="JetBrains Mono, monospace" font-size="9" fill="#64748B" letter-spacing="1">US FDA CLEARANCE</text>
+            <!-- Step 1 -->
+            <circle cx="50" cy="140" r="7" fill="rgba(37,99,235,.15)" stroke="#2563EB" stroke-width="1.5"/>
+            <text x="68" y="144" font-family="JetBrains Mono, monospace" font-size="9" fill="#2563EB" letter-spacing="1">LECHENG PRE-COMM</text>
+            <!-- Step 2 -->
+            <circle cx="50" cy="220" r="7" fill="rgba(37,99,235,.25)" stroke="#2563EB" stroke-width="1.5"/>
+            <text x="68" y="224" font-family="JetBrains Mono, monospace" font-size="9" fill="#2563EB" letter-spacing="1">NMPA STRATEGY</text>
+            <!-- Step 3 -->
+            <circle cx="50" cy="300" r="7" fill="rgba(37,99,235,.5)" stroke="#2563EB" stroke-width="1.5"/>
+            <text x="68" y="304" font-family="JetBrains Mono, monospace" font-size="9" fill="#2563EB" letter-spacing="1">RWS ENROLLMENT</text>
+            <!-- End -->
+            <circle cx="50" cy="400" r="10" fill="#2563EB" stroke="#2563EB" stroke-width="1.5"/>
+            <text x="68" y="404" font-family="JetBrains Mono, monospace" font-size="10" fill="#0F172A" font-weight="600" letter-spacing="1">NMPA APPROVAL</text>
+            <!-- 9 months callout -->
+            <rect x="150" y="200" width="80" height="22" rx="999" fill="#2563EB"/>
+            <text x="190" y="215" font-family="JetBrains Mono, monospace" font-size="10" fill="#FFFFFF" text-anchor="middle">9 MONTHS</text>
+            <text x="150" y="248" font-family="JetBrains Mono, monospace" font-size="8" fill="#94A3B8">VS TRADITIONAL</text>
+            <text x="150" y="268" font-family="Hanken Grotesk, sans-serif" font-size="22" fill="#0F172A" font-weight="300" letter-spacing="-0.5">3–5</text>
+            <text x="150" y="286" font-family="JetBrains Mono, monospace" font-size="8" fill="#94A3B8">YEARS</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service 02 — Connection (alt bg) -->
+  <section class="ap-svc alt" data-rev>
+    <div class="ct">
+      <div class="ap-row rev">
+        <div class="ap-content">
+          <div class="ap-num">02</div>
+          <div class="ap-tag" data-i18n="ap2.label">02 / Connection</div>
+          <h2 class="ap-h" data-i18n="ap2.h">The relationships you'd take 18 months to build yourself.</h2>
+          <p class="ap-desc" data-i18n="ap2.desc">Our network is not a directory. It is a set of operating relationships built across years of deal-making in Lecheng, Beijing, and the US. We embed our team into your engagement from day one — introductions that land, because they come from people who are trusted.</p>
+          <ol class="ap-steps">
+            <li><div class="ap-step-n">NODE 01</div><div class="ap-step-b"><strong data-i18n="ap2.s1t">Tier-3A Hospital Networks in Lecheng</strong><span data-i18n="ap2.s1d">Direct access to the Grade-3A hospitals licensed within the Lecheng pilot zone for early access treatment and real-world study enrollment. Operating relationships with department heads and IRB committees — not cold introductions.</span></div></li>
+            <li><div class="ap-step-n">NODE 02</div><div class="ap-step-b"><strong data-i18n="ap2.s2t">CRO & CDMO Partners</strong><span data-i18n="ap2.s2d">Working partnerships with PPD, 鼎泰药研 (Triapex), Pharmaron, and Qilu Pharmaceutical — covering Phase I–III operations, bioanalytical CRO services, and CDMO for process transfer.</span></div></li>
+            <li><div class="ap-step-n">NODE 03</div><div class="ap-step-b"><strong data-i18n="ap2.s3t">Government & Regulatory Access</strong><span data-i18n="ap2.s3d">Established communication lines with the Lecheng Medical Products Administration Bureau, the 真研院 (Lecheng Clinical Research Institute), and working familiarity with the China National Pharmaceutical Group (中国医药).</span></div></li>
+          </ol>
+        </div>
+        <div class="ap-visual">
+          <div class="net-grid">
+            <div class="net-cat">
+              <div class="net-label" data-i18n="net.l1">Clinical Sites</div>
+              <div class="net-items">
+                <span class="net-chip primary">Lecheng Grade-3A</span>
+                <span class="net-chip">PKUPH (北大人民)</span>
+                <span class="net-chip">Fuwai (阜外)</span>
+                <span class="net-chip">Zhongshan (中山)</span>
+              </div>
+            </div>
+            <div class="net-cat">
+              <div class="net-label" data-i18n="net.l2">CRO &amp; CDMO</div>
+              <div class="net-items">
+                <span class="net-chip">PPD Beijing</span>
+                <span class="net-chip">鼎泰药研</span>
+                <span class="net-chip">Pharmaron</span>
+                <span class="net-chip">齐鲁制药</span>
+                <span class="net-chip">Eurofins BPT</span>
+              </div>
+            </div>
+            <div class="net-cat">
+              <div class="net-label" data-i18n="net.l3">Government &amp; Regulatory</div>
+              <div class="net-items">
+                <span class="net-chip primary">Lecheng MPAB</span>
+                <span class="net-chip primary">真研院 (LCRI)</span>
+                <span class="net-chip">中国医药</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service 03 — Intelligence (dark) -->
+  <section class="ap-svc dark" data-rev>
+    <div class="ct">
+      <div class="ap-row">
+        <div class="ap-content">
+          <div class="ap-num">03</div>
+          <div class="ap-tag" data-i18n="ap3.label">03 / Intelligence</div>
+          <h2 class="ap-h" data-i18n="ap3.h">AI-augmented asset matching, indication selection, and patient population modeling.</h2>
+          <p class="ap-desc" data-i18n="ap3.desc">Data is our north star. We leverage proprietary algorithms and real-world datasets to match global therapeutic assets with the specific unmet needs of the Chinese patient population — and to design trial strategies that maximize NMPA approval probability.</p>
+        </div>
+        <div class="ap-visual">
+          <div class="ai-stack">
+            <div class="ai-card"><div class="ai-card-t" data-i18n="ai1.t">Algorithmic Asset Matching</div><div class="ai-card-d" data-i18n="ai1.d">Filtering 10,000+ FDA assets against China's indication landscape, epidemiology data, and existing domestic competition to identify high-probability pathways.</div></div>
+            <div class="ai-card"><div class="ai-card-t" data-i18n="ai2.t">Patient Population Modeling</div><div class="ai-card-d" data-i18n="ai2.d">China-specific patient identification using real-world hospital data. We estimate target population size, existing treatment patterns, and unmet need density by region.</div></div>
+            <div class="ai-card"><div class="ai-card-t" data-i18n="ai3.t">Comparable Deal Benchmarking</div><div class="ai-card-d" data-i18n="ai3.d">Licensing terms, upfront payments, milestone structures, and royalty rates — mapped from 200+ comparable US-China biotech transactions to anchor your negotiation.</div></div>
+            <div class="ai-card"><div class="ai-card-t" data-i18n="ai4.t">RWD Structuring for NMPA</div><div class="ai-card-d" data-i18n="ai4.d">Structuring your real-world data collection protocol from the earliest Lecheng enrollment so the resulting dataset meets NMPA's acceptance standards for NDA submission.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-sec"><div class="ct">
+    <h2 class="display" data-i18n-h="cta.h">Begin a <strong>confidential</strong> conversation.</h2>
+    <a href="#" onclick="showPage('contact');return false;" class="mbtn"><span data-i18n="cta.btn">Speak with a partner</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <div class="cta-meta" data-i18n="cta.meta">Response within 24 hours · NDA-first · Partner-led</div>
+  </div></section>
+</div>
+
+<!-- ═══════════════════════ THERAPEUTIC FOCUS PAGE ═══════════════════════ -->
+<div id="page-focus" class="page">
+  <div class="ph"><div class="ct">
+    <div class="ph-ey"><span class="eyebrow" data-i18n="fpage.ey">/ Therapeutic Focus</span></div>
+    <h1 class="display ph-h" data-i18n-h="fpage.h">Where our network<br>runs <strong>deepest.</strong></h1>
+    <p class="ph-sub" data-i18n="fpage.sub">We focus where the US-China clinical data complement is highest — and where our team has direct scientific, regulatory, and commercial relationships. We do not claim expertise in everything. We claim depth where it matters.</p>
+  </div></div>
+
+  <div class="ct"><div class="fp-grid">
+    <!-- siRNA -->
+    <div class="fp-card wide" data-rev>
+      <div class="fp-tag" data-i18n="fp1.tag">/ 01 · Precision Medicine</div>
+      <h2 class="fp-title" data-i18n="fp1.title">siRNA & Nucleic Acid Drugs</h2>
+      <p class="fp-desc" data-i18n="fp1.desc">Through RNA interference mechanisms, nucleic acid drugs silence transcription-level genes associated with chronic metabolic and cardiovascular diseases. We are entering the "third wave" of precision medicine — and GalNAc-siRNA is leading it. Our team has direct scientific affairs visibility into the late-stage US siRNA pipeline through Ivy Fu's position at a global CRO/CDMO. We understand the bioanalytical, CMC, and regulatory nuances that determine whether these assets can successfully navigate to China.</p>
+      <div class="fp-drugs">
+        <span class="fp-drug">Nucresiran (ATTR-CM) · Phase III China</span>
+        <span class="fp-drug">Zilebesiran (Hypertension) · IND Approved 2026</span>
+        <span class="fp-drug">Inclisiran (LDL-C) · Lecheng Access</span>
+      </div>
+    </div>
+    <!-- Cell & Gene -->
+    <div class="fp-card" data-rev>
+      <div class="fp-tag" data-i18n="fp2.tag">/ 02 · Advanced Biologics</div>
+      <h2 class="fp-title" data-i18n="fp2.title">Cell & Gene Therapy</h2>
+      <p class="fp-desc" data-i18n="fp2.desc">From CAR-T to base editing — we focus on long-duration curative therapies for chronic and rare diseases. Our LP Li Bo has direct access to Lecheng's Biomedical New Technology Channel, the dedicated early-access pathway for cell and gene therapies. Ivy Fu brings bioanalytical and viral vector testing expertise from Eurofins BPT.</p>
+      <div class="fp-drugs">
+        <span class="fp-drug">AAV Vectors</span>
+        <span class="fp-drug">CRISPR/Cas9</span>
+        <span class="fp-drug">CAR-T (Allo)</span>
+      </div>
+    </div>
+    <!-- Metabolic -->
+    <div class="fp-card" data-rev>
+      <div class="fp-tag" data-i18n="fp3.tag">/ 03 · Metabolic Disease</div>
+      <h2 class="fp-title" data-i18n="fp3.title">Metabolic & Obesity</h2>
+      <p class="fp-desc" data-i18n="fp3.desc">GLP-1 receptor agonists have redefined treatment of obesity and type 2 diabetes. China's patient population is massive and underserved. Dr. Zhong Zhaohui's 50,000+ metabolic surgery outcomes database — one of the largest of its kind in China — provides a unique real-world data anchor for trial design and patient population modeling.</p>
+      <div class="fp-drugs">
+        <span class="fp-drug">Oral GLP-1</span>
+        <span class="fp-drug">Dual Agonist (GIP/GLP-1)</span>
+        <span class="fp-drug">Triple Agonist</span>
+      </div>
+    </div>
+    <!-- Cardiovascular -->
+    <div class="fp-card" data-rev>
+      <div class="fp-tag" data-i18n="fp4.tag">/ 04 · Cardiovascular</div>
+      <h2 class="fp-title" data-i18n="fp4.title">Cardiovascular</h2>
+      <p class="fp-desc" data-i18n="fp4.desc">Renal denervation and siRNA-based antihypertensives represent the next frontier in managing China's 245 million hypertension patients. Partner Tieqian Wang actively monitors the US cardiovascular pipeline. Our team has engaged with Hainan programs on renal denervation technologies and AGT-targeted drugs.</p>
+      <div class="fp-drugs">
+        <span class="fp-drug">Renal Denervation</span>
+        <span class="fp-drug">AGT siRNA</span>
+        <span class="fp-drug">PCSK9 Inhibitors</span>
+      </div>
+    </div>
+    <!-- Oncology & Rare -->
+    <div class="fp-card" data-rev>
+      <div class="fp-tag" data-i18n="fp5.tag">/ 05 · Oncology & Rare</div>
+      <h2 class="fp-title" data-i18n="fp5.title">Oncology & Rare Disease</h2>
+      <p class="fp-desc" data-i18n="fp5.desc">Rare disease designated drugs in the US often face years of delay before reaching Chinese patients. The Lecheng early access program provides the fastest available pathway. Cindy Zhang has direct operational experience leading a US rare disease drug through China clinical development and NMPA filing.</p>
+      <div class="fp-drugs">
+        <span class="fp-drug">ADC</span>
+        <span class="fp-drug">Bispecific Antibodies</span>
+        <span class="fp-drug">Rare Disease</span>
+      </div>
+    </div>
+  </div></div>
+
+  <section class="cta-sec"><div class="ct">
+    <h2 class="display" data-i18n-h="cta.h">Begin a <strong>confidential</strong> conversation.</h2>
+    <a href="#" onclick="showPage('contact');return false;" class="mbtn"><span data-i18n="cta.btn">Speak with a partner</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <div class="cta-meta" data-i18n="cta.meta">Response within 24 hours · NDA-first · Partner-led</div>
+  </div></section>
+</div>
+
+<!-- ═══════════════════════ INSIGHTS PAGE ═══════════════════════ -->
+<div id="page-insights" class="page">
+  <div class="ph"><div class="ct">
+    <div class="ph-ey"><span class="eyebrow" data-i18n="ipage.ey">/ Intelligence</span></div>
+    <h1 class="display ph-h" data-i18n-h="ipage.h">Global intelligence,<br><strong>human impact.</strong></h1>
+    <p class="ph-sub" data-i18n="ipage.sub">Proprietary analysis on the evolving biomedical landscape — from Boao Lecheng's regulatory shifts to deep-dive cross-border pipeline reports. Published for partners and circulated to a select list of US biotech executives.</p>
+  </div></div>
+
+  <div class="ct ins-pg">
+    <!-- Featured + 2 side -->
+    <div style="margin-bottom:28px;"><span class="eyebrow" data-i18n="isec1.ey">/ Pacific Pipeline · Featured Report</span></div>
+    <div class="ins-feat">
+      <div class="icard feat" style="min-height:400px;">
+        <div class="i-meta"><span class="i-tag" data-i18n="i1.tag">Featured Report</span><span class="i-date">JUN 2026 · 14 MIN</span></div>
+        <h3 class="i-title" style="font-size:24px;" data-i18n="i1.title">The Lecheng Real-World Study pathway: an operator's field guide for US biotechs in 2026</h3>
+        <p class="i-exc" data-i18n="i1.exc">A practical, document-by-document map of how a Phase II-ready asset moves from a US data package to enrolled Chinese patients in nine months — and the four places this pathway most commonly fails.</p>
+        <span class="i-cta" data-i18n="i1.cta">Continue reading →</span>
+      </div>
+      <div class="icard">
+        <div class="i-meta"><span class="i-tag" data-i18n="ip2.tag">Q2 2026 Report</span><span class="i-date">APR 2026</span></div>
+        <h3 class="i-title" data-i18n="ip2.title">NMPA Accelerated Approval: evaluating the success metrics of the Lecheng pilot at year five</h3>
+        <p class="i-exc" data-i18n="ip2.exc">A retrospective on approval rates, time-to-market, and the indications where the RWS pathway has demonstrated the highest conversion rate to NMPA NDA.</p>
+      </div>
+      <div class="icard">
+        <div class="i-meta"><span class="i-tag" data-i18n="ip3.tag">Q1 2026 Report</span><span class="i-date">JAN 2026</span></div>
+        <h3 class="i-title" data-i18n="ip3.title">Oncology Pipeline: next-gen targeted therapies and the China approval gap</h3>
+        <p class="i-exc" data-i18n="ip3.exc">An analysis of 22 FDA-approved oncology assets with no active NMPA registration — and the regulatory rationale for why each represents a viable Lecheng candidate.</p>
+      </div>
+    </div>
+
+    <!-- Lecheng Brief -->
+    <div class="lb-head">
+      <span class="eyebrow" data-i18n="lb.ey">/ Lecheng Brief · Monthly Digest</span>
+      <h3 data-i18n="lb.h">Critical updates from the Hainan Boao Lecheng Pilot Zone.</h3>
+      <p class="lb-sub" data-i18n="lb.sub">Published monthly. Each issue covers policy shifts, new drug admissions, approval rate data, and regulatory guidance changes within the Lecheng ecosystem.</p>
+    </div>
+    <div class="art-grid">
+      <div class="art-card"><div class="art-cat" data-i18n="a1.cat">Policy Update · Aug 2024</div><h4 class="art-title" data-i18n="a1.t">New GACP Guidelines for Rare Disease Clinical Data</h4><div class="art-date">RARE DISEASE · REAL WORLD EVIDENCE</div></div>
+      <div class="art-card"><div class="art-cat" data-i18n="a2.cat">New Inclusion · Jul 2024</div><h4 class="art-title" data-i18n="a2.t">Five Next-Gen Cardiac Implants Approved for Early Access</h4><div class="art-date">CARDIOVASCULAR · STARTUP ECOSYSTEM</div></div>
+      <div class="art-card"><div class="art-cat" data-i18n="a3.cat">Supervision · Jun 2024</div><h4 class="art-title" data-i18n="a3.t">Enhanced Post-Market Monitoring Scheme for Imported Devices</h4><div class="art-date">COMPLIANCE · DIGITAL HEALTH</div></div>
+      <div class="art-card"><div class="art-cat" data-i18n="a4.cat">Insights · May 2026</div><h4 class="art-title" data-i18n="a4.t">Nucresiran in China: Phase III timeline and NMPA NDA roadmap</h4><div class="art-date">SIRNA · PIPELINE</div></div>
+      <div class="art-card"><div class="art-cat" data-i18n="a5.cat">Market Brief · May 2026</div><h4 class="art-title" data-i18n="a5.t">Oral GLP-1 in Greater China: late-stage assets seeking partnership</h4><div class="art-date">METABOLIC · OBESITY</div></div>
+      <div class="art-card"><div class="art-cat" data-i18n="a6.cat">Policy · Apr 2026</div><h4 class="art-title" data-i18n="a6.t">Zilebesiran IND Approved in China: implications for AGT-targeting</h4><div class="art-date">CARDIOVASCULAR · SIRNA</div></div>
+    </div>
+
+    <!-- Newsletter -->
+    <div style="margin-top:60px;background:var(--dark);border-radius:8px;padding:48px;display:grid;grid-template-columns:1fr 1fr;gap:48px;">
+      <div>
+        <span class="eyebrow" style="color:rgba(245,247,250,.4);" data-i18n="nl.ey">/ Stay Ahead</span>
+        <h3 style="font-size:28px;font-weight:600;letter-spacing:-.025em;color:var(--bg-card);margin-top:16px;margin-bottom:12px;" data-i18n="nl.h">Subscribe to Lecheng Brief</h3>
+        <p style="font-size:13px;color:rgba(245,247,250,.55);line-height:1.65;" data-i18n="nl.sub">Monthly intelligence briefing on Lecheng policy, pipeline admissions, and cross-border regulatory shifts. Circulated to a select list of US biotech executives.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;justify-content:center;gap:12px;">
+        <input type="email" placeholder="Professional email address" style="width:100%;background:rgba(245,247,250,.06);border:1px solid rgba(245,247,250,.15);border-radius:4px;padding:12px 16px;font-family:'Hanken Grotesk',sans-serif;font-size:14px;color:var(--bg-card);outline:none;" data-i18n-ph="nl.ph">
+        <button style="background:var(--accent);color:#fff;border:none;padding:12px 24px;border-radius:4px;font-family:'Hanken Grotesk',sans-serif;font-size:14px;font-weight:500;cursor:pointer;transition:background .2s;" data-i18n="nl.btn">Subscribe</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════ ABOUT PAGE ═══════════════════════ -->
+<div id="page-about" class="page">
+  <div class="ph"><div class="ct">
+    <div class="ph-ey"><span class="eyebrow" data-i18n="abt.ey">/ Company Story</span></div>
+    <h1 class="display ph-h" data-i18n-h="abt.h">Navigating the future of<br><strong>cross-border</strong> biotech.</h1>
+  </div></div>
+
+  <!-- Company story -->
+  <div class="ct"><div class="about-story" data-rev>
+    <div>
+      <h2 class="story-h" data-i18n="st.h1">A bridge that exists nowhere else.</h2>
+      <p class="story-p" data-i18n="st.p1">BioArch was formed at the intersection of a simple observation and an untapped opportunity: the United States produces more biomedical innovation than any country in history, and China has quietly built one of the world's most sophisticated clinical infrastructure networks — anchored by Hainan Lecheng's real-world study pathway, which can move a foreign-approved drug from filing to Chinese patients in nine months.</p>
+      <p class="story-p" data-i18n="st.p2">Most US biotechs have no operating presence in China and no way to build the relationships needed to access this infrastructure within a reasonable deal timeline. Most Chinese intermediaries lack the scientific depth to credibly evaluate complex modalities like siRNA, cell therapy, or novel GLP-1 combinations. BioArch was built to close both gaps simultaneously.</p>
+    </div>
+    <div>
+      <h2 class="story-h" data-i18n="st.h2">Our model is deliberately light.</h2>
+      <p class="story-p" data-i18n="st.p3">We are a lean partnership, not a consulting factory. Every engagement is handled by the partners whose names are on this page — not delegated to analysts, not managed through a ticketing system. We take a small number of engagements at a time, and we choose them on the basis of scientific merit, pathway fit, and team conviction.</p>
+      <p class="story-p" data-i18n="st.p4">Our operating model is structured as a US LLC and a Hainan limited partnership — allowing us to act as legal representatives in Lecheng while operating commercially from the United States. We are not brokers. We are not finders. We are operators, advisors, and connectors — with skin in the outcome.</p>
+    </div>
+  </div></div>
+
+  <!-- WORLD MAP -->
+  <section class="map-sec">
+    <div class="ct">
+      <span class="eyebrow" data-i18n="map.ey">/ Global Presence</span>
+      <h3 data-i18n="map.h">Connected across the US-China corridor.</h3>
+      <div class="map-wrap">
+        <svg id="worldMap" viewBox="0 0 960 440" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;">
+          <rect width="960" height="440" fill="#0E0C0F"/>
+          <!-- Grid lines -->
+          <g stroke="rgba(245,247,250,0.04)" stroke-width="0.5">
+            <line x1="0" y1="73" x2="960" y2="73"/>
+            <line x1="0" y1="147" x2="960" y2="147"/>
+            <line x1="0" y1="220" x2="960" y2="220"/>
+            <line x1="0" y1="293" x2="960" y2="293"/>
+            <line x1="0" y1="366" x2="960" y2="366"/>
+            <line x1="80" y1="0" x2="80" y2="440"/>
+            <line x1="160" y1="0" x2="160" y2="440"/>
+            <line x1="240" y1="0" x2="240" y2="440"/>
+            <line x1="320" y1="0" x2="320" y2="440"/>
+            <line x1="400" y1="0" x2="400" y2="440"/>
+            <line x1="480" y1="0" x2="480" y2="440"/>
+            <line x1="560" y1="0" x2="560" y2="440"/>
+            <line x1="640" y1="0" x2="640" y2="440"/>
+            <line x1="720" y1="0" x2="720" y2="440"/>
+            <line x1="800" y1="0" x2="800" y2="440"/>
+            <line x1="880" y1="0" x2="880" y2="440"/>
+          </g>
+          <!-- Continental fills (simplified) -->
+          <g fill="rgba(245,247,250,0.07)" stroke="rgba(245,247,250,0.14)" stroke-width="0.8">
+            <!-- North America -->
+            <path d="M38,46 L95,42 L148,98 L188,148 L244,152 L268,175 L288,160 L304,125 L322,105 L335,122 L318,68 L296,52 L258,42 L220,38 L150,42 L98,38 Z"/>
+            <!-- Mexico/Central Am -->
+            <path d="M188,148 L248,152 L258,178 L248,195 L228,215 L218,225 L205,215 L192,195 Z"/>
+            <!-- South America -->
+            <path d="M218,225 L260,218 L292,228 L308,252 L315,290 L308,335 L288,378 L268,418 L248,418 L228,398 L215,365 L208,328 L212,285 Z"/>
+            <!-- Greenland -->
+            <path d="M322,18 L360,12 L380,22 L375,42 L355,55 L330,50 L318,38 Z"/>
+            <!-- Europe -->
+            <path d="M432,78 L452,68 L468,62 L498,58 L522,62 L548,62 L558,75 L555,88 L540,98 L525,108 L510,115 L492,120 L472,118 L458,108 L442,98 Z"/>
+            <!-- Africa -->
+            <path d="M442,118 L508,105 L548,108 L578,128 L598,162 L602,205 L595,252 L578,300 L555,345 L528,380 L502,395 L472,388 L448,368 L432,328 L428,285 L432,242 L435,195 Z"/>
+            <!-- Asia -->
+            <path d="M558,62 L625,48 L695,42 L762,45 L825,48 L875,58 L918,72 L948,92 L958,118 L945,142 L918,158 L885,168 L858,178 L832,185 L808,195 L788,202 L768,212 L745,218 L718,215 L692,208 L668,198 L645,188 L618,178 L598,162 L578,128 L558,88 Z"/>
+            <!-- Japan -->
+            <path d="M875,118 L888,108 L898,115 L895,132 L878,142 L868,135 Z"/>
+            <!-- Hainan Island -->
+            <circle cx="795" cy="200" r="5" fill="rgba(29,82,232,0.4)" stroke="rgba(29,82,232,0.8)" stroke-width="1"/>
+            <!-- Australia -->
+            <path d="M762,278 L818,262 L868,268 L895,285 L905,315 L895,352 L868,372 L832,382 L802,372 L778,352 L762,325 Z"/>
+          </g>
+
+          <!-- Connection arcs (animated) -->
+          <!-- Detroit (42.3N, 83.0W) → x=(−83+180)*2.667=258, y=(90-42.3)*2.444=117 -->
+          <!-- Boston (42.4N, 71.1W) → x=(−71.1+180)*2.667=290, y≈117 -->
+          <!-- Beijing (39.9N, 116.4E) → x=(116.4+180)*2.667=790, y=(90-39.9)*2.444=122 -->
+          <!-- Boao Hainan (19.2N, 110.5E) → x=(110.5+180)*2.667=774, y=(90-19.2)*2.444=173 -->
+          <!-- Arc: Detroit to Beijing -->
+          <path id="arc1" d="M258,117 Q480,40 790,122"
+            fill="none" stroke="#1D52E8" stroke-width="1.5" stroke-dasharray="800" stroke-dashoffset="800" opacity="0.7">
+            <animate attributeName="stroke-dashoffset" from="800" to="0" dur="3s" begin="0.5s" fill="freeze"/>
+          </path>
+          <!-- Arc: Boston to Boao Hainan -->
+          <path id="arc2" d="M290,117 Q520,30 774,173"
+            fill="none" stroke="#3B6FEF" stroke-width="1.5" stroke-dasharray="800" stroke-dashoffset="800" opacity="0.55">
+            <animate attributeName="stroke-dashoffset" from="800" to="0" dur="3.5s" begin="1.2s" fill="freeze"/>
+          </path>
+          <!-- Faint dashed return arcs -->
+          <path d="M790,122 Q520,260 258,117" fill="none" stroke="rgba(29,82,232,0.2)" stroke-width="1" stroke-dasharray="4,6"/>
+          <path d="M774,173 Q520,285 290,117" fill="none" stroke="rgba(59,111,239,0.15)" stroke-width="1" stroke-dasharray="4,6"/>
+
+          <!-- City nodes -->
+          <!-- Detroit -->
+          <circle cx="258" cy="117" r="4" fill="#1D52E8">
+            <animate attributeName="r" values="4;8;4" dur="2.5s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="1;0.3;1" dur="2.5s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="258" cy="117" r="3.5" fill="#1D52E8"/>
+          <text x="248" y="132" font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(245,247,250,0.55)" text-anchor="middle">DETROIT</text>
+          <!-- Boston -->
+          <circle cx="290" cy="117" r="4" fill="#1D52E8">
+            <animate attributeName="r" values="4;7;4" dur="2.8s" begin="0.3s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="1;0.3;1" dur="2.8s" begin="0.3s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="290" cy="117" r="3" fill="#1D52E8"/>
+          <text x="290" y="132" font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(245,247,250,0.55)" text-anchor="middle">BOSTON</text>
+          <!-- Beijing -->
+          <circle cx="790" cy="122" r="4" fill="#3B6FEF">
+            <animate attributeName="r" values="4;9;4" dur="3s" begin="3.5s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="1;0.3;1" dur="3s" begin="3.5s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="790" cy="122" r="3.5" fill="#3B6FEF"/>
+          <text x="790" y="138" font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(245,247,250,0.55)" text-anchor="middle">BEIJING</text>
+          <!-- Boao Lecheng -->
+          <circle cx="774" cy="173" r="5" fill="#1D52E8">
+            <animate attributeName="r" values="5;11;5" dur="2.2s" begin="4.5s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="1;0.2;1" dur="2.2s" begin="4.5s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="774" cy="173" r="4" fill="#1D52E8"/>
+          <text x="774" y="190" font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(245,247,250,0.7)" text-anchor="middle">BOAO · LECHENG</text>
+
+          <!-- Labels -->
+          <text x="20" y="220" font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(245,247,250,0.2)" writing-mode="tb">EQUATOR</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Full Team -->
+  <div class="full-team">
+    <div class="ct">
+      <span class="eyebrow" data-i18n="ftm.ey">/ Partnership</span>
+      <h2 data-i18n="ftm.h" style="margin-top:16px;">The full team.</h2>
+      <div class="tm-full-grid">
+        <!-- Member 1 -->
+        <div class="tm-full-card">
+          <div class="tmf-flag" data-i18n="m1.flag">China · Beijing</div>
+          <div class="tmf-role" data-i18n="m1.role">Chief Medical Officer</div>
+          <div class="tmf-name">Dr. Zhong Zhaohui</div>
+          <div class="tmf-name-zh">钟朝辉</div>
+          <div class="tmf-org" data-i18n="m1.org">Peking University People's Hospital · Chief Surgeon</div>
+          <p class="tmf-bio" data-i18n="m1.bio">主任医师 at Peking University People's Hospital's Laparoscopic & Hernia Surgery department. Holds a clinical surgery doctorate from Peking University Medical College and completed his postdoctoral fellowship at Purdue-Indiana University Medical Center (2010–2011) researching adipose stem cells and tumor angiogenesis. 20+ years of operative experience — nearly 6,000 laparoscopic procedures and 3,000 GI oncology cases. Specialist in bariatric/metabolic surgery, thyroid, hepatobiliary, and GI tumors. Associate editor of the Chinese Journal of General Surgery; co-translator of "Schwartz's Principles of Surgery" (18th Ed). Speaker at the 2024 China Obesity Congress. Custodian of one of China's largest metabolic surgery outcomes databases — directly relevant to GLP-1 and metabolic drug trial design.</p>
+        </div>
+        <!-- Member 2 -->
+        <div class="tm-full-card">
+          <div class="tmf-flag" data-i18n="m2.flag">United States · Michigan</div>
+          <div class="tmf-role" data-i18n="m2.role">Chair, US Operations</div>
+          <div class="tmf-name">Cindy Zhang</div>
+          <div class="tmf-name-zh">张红芬</div>
+          <div class="tmf-org" data-i18n="m2.org">Microsoft (former) · Cross-Border Pharma BD</div>
+          <p class="tmf-bio" data-i18n="m2.bio">Former Microsoft enterprise account manager with deep enterprise relationships across technology and life sciences. Led the US-to-China clinical development and NMPA filing process for a US-origin ALS (amyotrophic lateral sclerosis) therapeutic — one of the first cross-border rare disease programs to successfully engage the Lecheng pathway. Engaged with China National Pharmaceutical Group (中国医药) on Hainan-based commercialization projects. Deep familiarity with cross-border financing structures, term sheet negotiation, and the operational realities of getting a US drug to Chinese clinical sites.</p>
+        </div>
+        <!-- Member 3 -->
+        <div class="tm-full-card">
+          <div class="tmf-flag" data-i18n="m3.flag">United States · National</div>
+          <div class="tmf-role" data-i18n="m3.role">Chief Scientist · US</div>
+          <div class="tmf-name">Ivy Fu</div>
+          <div class="tmf-name-zh">紫薇</div>
+          <div class="tmf-org" data-i18n="m3.org">Eurofins Scientific · Senior Scientific Affairs</div>
+          <p class="tmf-bio" data-i18n="m3.bio">Senior scientific affairs and business development leader at Eurofins Scientific — one of the world's largest CRO/CDMO/testing networks, specializing in pharmaceutical testing, bioanalytical CRO, and cell & gene therapy product testing. Direct visibility into late-stage US biotechs commercializing siRNA therapeutics, CAR-T, gene-edited cell therapies, and novel biologics. Brings hands-on understanding of the CMC requirements, bioanalytical method development, and viral vector characterization that determine whether complex modalities can pass regulatory scrutiny in China.</p>
+        </div>
+        <!-- Member 4 -->
+        <div class="tm-full-card">
+          <div class="tmf-flag" data-i18n="m4.flag">China · Hainan Lecheng</div>
+          <div class="tmf-role" data-i18n="m4.role">Managing Partner · Lecheng</div>
+          <div class="tmf-name">Dr. Li Bo</div>
+          <div class="tmf-name-zh">李博</div>
+          <div class="tmf-org" data-i18n="m4.org">BioArch Lecheng LP · Legal Representative</div>
+          <p class="tmf-bio" data-i18n="m4.bio">Legal representative of BioArch's Hainan limited partnership. Embedded within the Lecheng government and research infrastructure — with operating relationships with the Lecheng Medical Products Administration Bureau, the 真研院 (Lecheng Clinical Research Institute), and the licensed Grade-3A hospitals within the pilot zone. The connective tissue between BioArch's US-side strategy and China-side execution. Li Bo's access is not theoretical — these are working relationships built through years of presence inside the Lecheng ecosystem.</p>
+        </div>
+        <!-- Member 5 -->
+        <div class="tm-full-card">
+          <div class="tmf-flag" data-i18n="m5.flag">United States</div>
+          <div class="tmf-role" data-i18n="m5.role">Partner · US Business Development</div>
+          <div class="tmf-name">Tieqian Wang</div>
+          <div class="tmf-name-zh">铁强</div>
+          <div class="tmf-org" data-i18n="m5.org">BioArch US · Commercial Operations</div>
+          <p class="tmf-bio" data-i18n="m5.bio">Responsible for US entity formation, commercial representation, and business development within the American biotech market. Actively monitors the cardiovascular and renal denervation pipeline — tracking assets in late-stage US development that represent viable China pathway candidates. Brings operational grounding in the administrative and legal requirements of establishing cross-border commercial structures for biotech advisory mandates.</p>
+        </div>
+        <!-- Member 6 -->
+        <div class="tm-full-card">
+          <div class="tmf-flag" data-i18n="m6.flag">United States · Michigan</div>
+          <div class="tmf-role" data-i18n="m6.role">Product & Brand Design</div>
+          <div class="tmf-name">Siyu Zhong</div>
+          <div class="tmf-name-zh">钟思宇</div>
+          <div class="tmf-org" data-i18n="m6.org">University of Michigan · MS HCI · BS Informatics</div>
+          <p class="tmf-bio" data-i18n="m6.bio">MS Human-Computer Interaction and BS Informatics/Visual Design from the University of Michigan (GPA 3.98). Product designer with full-stack vibe coding skills — React, TypeScript, Figma, Claude Code, Cursor. Creator of Tabzen, a Chrome extension for browser productivity. Responsible for BioArch's brand identity, digital product design, and investor communications. Brings the design-systems rigor and product sensibility needed to build the AI-augmented tools at the core of BioArch's Intelligence service.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="cta-sec"><div class="ct">
+    <h2 class="display" data-i18n-h="cta.h">Begin a <strong>confidential</strong> conversation.</h2>
+    <a href="#" onclick="showPage('contact');return false;" class="mbtn"><span data-i18n="cta.btn">Speak with a partner</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <div class="cta-meta" data-i18n="cta.meta">Response within 24 hours · NDA-first · Partner-led</div>
+  </div></section>
+</div>
+
+<!-- ═══════════════════════ CONTACT PAGE ═══════════════════════ -->
+<div id="page-contact" class="page">
+  <div class="ph"><div class="ct">
+    <div class="ph-ey"><span class="eyebrow" data-i18n="ct.ey">/ Global Reach</span></div>
+    <h1 class="display ph-h" data-i18n-h="ct.h">Global presence,<br><strong>direct access.</strong></h1>
+  </div></div>
+
+  <div class="ct"><div class="contact-grid" data-rev>
+    <!-- Left column -->
+    <div class="contact-l">
+      <h2 data-i18n="ct.lh">Connecting global intelligence to human impact.</h2>
+      <p data-i18n="ct.lp">Our multidisciplinary teams are synchronized across strategic hubs to serve your mission in real-time. Every inquiry receives a response within one business cycle from a partner, not an associate.</p>
+      <ul class="off-list">
+        <li><span class="off-city" data-i18n="off.det">Detroit</span><span class="off-detail">DTW · EST · UTC−05</span></li>
+        <li><span class="off-city" data-i18n="off.bos">Boston</span><span class="off-detail">BOS · EST · UTC−05</span></li>
+        <li><span class="off-city" data-i18n="off.bj">Beijing</span><span class="off-detail">PEK · CST · UTC+08</span></li>
+        <li><span class="off-city" data-i18n="off.lc">Boao · Hainan Lecheng</span><span class="off-detail">HAK · CST · UTC+08</span></li>
+      </ul>
+      <div style="margin-top:48px;padding:24px;background:var(--bg2);border-radius:8px;border:1px solid var(--line2);">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9.5px;text-transform:uppercase;letter-spacing:.12em;color:var(--ink4);margin-bottom:8px;">Direct Contact</div>
+        <a href="mailto:hello@bioarch.bio" style="font-size:16px;font-weight:600;color:var(--ink);text-decoration:none;display:block;letter-spacing:-.015em;">hello@bioarch.bio</a>
+        <div style="font-size:12px;color:var(--ink3);margin-top:4px;" data-i18n="ct.emailnote">Partner-monitored · 24h response</div>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <div class="form-wrap">
+      <div class="form-title" data-i18n="form.title">Professional Inquiry</div>
+      <p class="form-sub" data-i18n="form.sub">Provide your details below. A specialized partner will contact you within one business cycle. All inquiries handled under NDA-first protocol.</p>
+      <div class="form-row">
+        <div class="form-field"><label data-i18n="form.name">Full Name</label><input type="text" placeholder="Dr. Jane Doe"></div>
+        <div class="form-field"><label data-i18n="form.org">Organization</label><input type="text" placeholder="Acme Therapeutics"></div>
+      </div>
+      <div class="form-row">
+        <div class="form-field"><label data-i18n="form.email">Email Address</label><input type="email" placeholder="jane@acme.bio"></div>
+        <div class="form-field"><label data-i18n="form.interest">Service Interest</label>
+          <select>
+            <option data-i18n="form.opt1">Strategic Pathway Design</option>
+            <option data-i18n="form.opt2">Network Connection</option>
+            <option data-i18n="form.opt3">AI Intelligence Matching</option>
+            <option data-i18n="form.opt4">Lecheng Pre-Communication</option>
+            <option data-i18n="form.opt5">Other / Multi-Service</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-field" style="margin-top:16px;"><label data-i18n="form.brief">Message / Brief</label><textarea placeholder="Describe the scope of your inquiry. The therapeutic area, asset stage, and any specific timing constraints."></textarea></div>
+      <div class="nda-note">
+        <span class="nda-icon">🔒</span>
+        <div><strong data-i18n="form.nda.t">Confidentiality Protocol</strong><span data-i18n="form.nda.d">Your inquiry is handled under our standard NDA framework. We prioritize data integrity and client anonymity throughout every engagement.</span></div>
+      </div>
+      <button class="mbtn" style="width:100%;justify-content:center;padding:14px;" data-i18n="form.submit"><span>Initiate Consultation</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    </div>
+  </div></div>
+
+  <!-- Reuse footer styling via class only -->
+  <footer style="background:var(--dark);padding:80px 0 28px;margin-top:60px;">
+    <div class="ct">
+      <div class="tzgrid">
+        <div><div class="tz-city" data-i18n="tz.det">Detroit</div><div class="tz-time" id="tz5">—</div><div class="tz-off">EST · UTC −05</div></div>
+        <div><div class="tz-city" data-i18n="tz.bos">Boston</div><div class="tz-time" id="tz6">—</div><div class="tz-off">EST · UTC −05</div></div>
+        <div><div class="tz-city" data-i18n="tz.bj">Beijing</div><div class="tz-time" id="tz7">—</div><div class="tz-off">CST · UTC +08</div></div>
+        <div><div class="tz-city" data-i18n="tz.lc">Boao · Lecheng</div><div class="tz-time" id="tz8">—</div><div class="tz-off">CST · UTC +08</div></div>
+      </div>
+      <div class="ft-bot">
+        <div>© 2026 BioArch · 拜驰生物医药</div>
+        <div><a href="#" data-i18n="ft.terms">Terms</a><a href="#" data-i18n="ft.priv">Privacy</a></div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- Footer for non-home inner pages (Approach, Focus, Insights, About) -->
+<footer id="footer-inner" style="display:none;">
+  <div class="ct">
+    <div class="tzgrid">
+      <div><div class="tz-city" data-i18n="tz.det">Detroit</div><div class="tz-time" id="tzi1">—</div><div class="tz-off">EST · UTC −05</div></div>
+      <div><div class="tz-city" data-i18n="tz.bos">Boston</div><div class="tz-time" id="tzi2">—</div><div class="tz-off">EST · UTC −05</div></div>
+      <div><div class="tz-city" data-i18n="tz.bj">Beijing</div><div class="tz-time" id="tzi3">—</div><div class="tz-off">CST · UTC +08</div></div>
+      <div><div class="tz-city" data-i18n="tz.lc">Boao · Lecheng</div><div class="tz-time" id="tzi4">—</div><div class="tz-off">CST · UTC +08</div></div>
+    </div>
+    <div class="ft-grid">
+      <div><div class="ft-logo">BioArch</div><p class="ft-tag" data-i18n="ft.tag">A cross-border biotech advisory firm. We link US innovation to Chinese clinical execution — anchored in Hainan Lecheng.</p></div>
+      <div class="ft-col"><div class="ft-col-t" data-i18n="fc1.t">Approach</div><ul>
+        <li><a href="#" onclick="showPage('approach');return false;" data-i18n="fc1.a">Pathfinding</a></li>
+        <li><a href="#" onclick="showPage('approach');return false;" data-i18n="fc1.b">Connection</a></li>
+        <li><a href="#" onclick="showPage('approach');return false;" data-i18n="fc1.c">Intelligence</a></li>
+      </ul></div>
+      <div class="ft-col"><div class="ft-col-t" data-i18n="fc2.t">Company</div><ul>
+        <li><a href="#" onclick="showPage('about');return false;" data-i18n="fc2.a">About</a></li>
+        <li><a href="#" onclick="showPage('about');return false;" data-i18n="fc2.b">The team</a></li>
+        <li><a href="#" onclick="showPage('focus');return false;" data-i18n="fc2.c">Therapeutic focus</a></li>
+      </ul></div>
+      <div class="ft-col"><div class="ft-col-t" data-i18n="fc3.t">Intelligence</div><ul>
+        <li><a href="#" onclick="showPage('insights');return false;" data-i18n="fc3.a">Lecheng Brief</a></li>
+        <li><a href="#" onclick="showPage('insights');return false;" data-i18n="fc3.b">Pacific Pipeline</a></li>
+        <li><a href="#" onclick="showPage('insights');return false;" data-i18n="fc3.c">All Insights</a></li>
+      </ul></div>
+      <div class="ft-col"><div class="ft-col-t" data-i18n="fc4.t">Connect</div><ul>
+        <li><a href="mailto:hello@bioarch.bio">hello@bioarch.bio</a></li>
+        <li><a href="#" data-i18n="fc4.b">LinkedIn</a></li>
+        <li><a href="#" onclick="showPage('contact');return false;" data-i18n="fc4.c">Press</a></li>
+      </ul></div>
+    </div>
+    <div class="ft-bot">
+      <div>© 2026 BioArch · 拜驰生物医药</div>
+      <div><a href="#" data-i18n="ft.terms">Terms</a><a href="#" data-i18n="ft.priv">Privacy</a></div>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
