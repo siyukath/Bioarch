@@ -97,9 +97,14 @@ body.nav-open .nav-toggle span:nth-child(3){transform:translateY(-6.5px) rotate(
 .nav-overlay.open{display:block;opacity:1;pointer-events:auto;}
 body.nav-open{overflow:hidden;}
 @media(max-width:1023px){
-  .nav-toggle{display:flex;}
-  .nv-controls{gap:8px;}
-  .lsw{padding:2px;}
+  .nv{display:grid;grid-template-columns:1fr auto;align-items:center;gap:12px;}
+  .logo{grid-column:1;grid-row:1;min-width:0;}
+  .nv-controls{
+    grid-column:2;grid-row:1;
+    display:flex;flex-direction:row;flex-wrap:nowrap;align-items:center;gap:10px;
+  }
+  .nav-toggle{display:flex;flex-shrink:0;}
+  .lsw{display:flex;flex-direction:row;flex-shrink:0;padding:2px;}
   .lb{padding:6px 10px;}
   .nl{position:fixed;top:0;right:0;width:min(300px,86vw);height:100dvh;height:100vh;
     flex-direction:column;align-items:stretch;gap:0;padding:88px 28px 32px;
