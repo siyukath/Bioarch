@@ -7,7 +7,7 @@ en: {
   'nav.approach':'Approach','nav.focus':'Therapeutic Focus','nav.insights':'Insights','nav.about':'About','nav.cta':'Begin a conversation',
   // hero
   'hero.ey':'/ Cross-Border Biotech Advisory · Est. 2026',
-  'hero.l1':'Where US innovation','hero.l2':"meets China's",'hero.l3':'accelerated','hero.l4':'pathways.',
+  'hero.l1':'Where US innovation','hero.l2':"meets China's",'hero.l3':'<strong>accelerated</strong>','hero.l4':'pathways.',
   'hero.sub':"BioArch is a specialist advisory firm helping US biotech innovators bring breakthrough therapies to Chinese patients — through Hainan Lecheng's real-world study pathway, augmented by AI intelligence.",
   'hero.s1':'Partner-led engagements','hero.s2':'NDA-first conversations','hero.s3':'Response within 24 hours',
   'dna.label':'/ Double Helix · Scientific Visualization',
@@ -159,7 +159,7 @@ zh: {
   'nav.approach':'方法论','nav.focus':'治疗领域','nav.insights':'洞察','nav.about':'关于','nav.cta':'联系我们',
   // hero
   'hero.ey':'/ 中美跨境生物医药咨询 · 2026',
-  'hero.l1':'让全球创新疗法','hero.l2':'更快','hero.l3':'抵达','hero.l4':'中国患者。',
+  'hero.l1':'让全球创新疗法<strong>更快抵达</strong>','hero.l2':'中国患者。','hero.l3':'','hero.l4':'',
   'hero.sub':'拜驰生物（BioArch）是一家专注中美跨境的生物医药咨询机构。依托海南乐城真实世界研究通道、AI辅助的资产匹配，以及一支在中美两端都做过药的合伙人团队，我们帮美国创新药企用最高效、最稳妥的方式进入中国市场。',
   'hero.s1':'合伙人亲自对接','hero.s2':'保密协议先行','hero.s3':'24小时内响应',
   'dna.label':'/ 双螺旋 · 科学可视化',
@@ -176,7 +176,7 @@ zh: {
   'qte.t':'下一代肿瘤药、代谢病药、罕见病药，<strong>不会只在某一个国家诞生</strong>。它们会在中美之间——美国研发、中国验证——的协作里成型。我们要做的，就是把这两端真正连起来。',
   'qte.attr':'来自团队 · 拜驰生物 · BioArch',
   // services
-  'svc.ey':'/ 服务方法','svc.h':'一座桥，<strong>三段路径。</strong>',
+  'svc.ey':'/ 服务方法','svc.h':'一座桥，<strong>三段路径</strong>。',
   'svc.intro':'我们只做三件事——而且每一件都由合伙人亲自把关。从第一通电话到项目落地，全程不交给低年资的同事，也不让你等好几周才收到回复。',
   's1.num':'路径设计','s1.title':'路径设计','s1.sub':'从FDA已获批的资产到中国患者——找到最快、最稳妥的那一条路。',
   's1.b1':'乐城真实世界研究预沟通与策略制定','s1.b2':'NMPA申报路径与监管路线图','s1.b3':'多中心GCP临床试验设计',
@@ -335,6 +335,11 @@ function setLang(l){
     document.querySelectorAll('[data-i18n-ph]').forEach(el => {
       const k = el.getAttribute('data-i18n-ph');
       if(T[l][k]) el.placeholder = T[l][k];
+    });
+    document.querySelectorAll('.hero-line').forEach(line => {
+      const inner = line.querySelector('[data-i18n-span]');
+      const text = inner ? inner.textContent.trim() : '';
+      line.style.display = text ? '' : 'none';
     });
     document.body.style.opacity = '1';
   }, 180);
