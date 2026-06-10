@@ -312,43 +312,60 @@ zh: {
 // LANGUAGE SWITCHER
 // ─────────────────────────────────────────────────────────────────
 let lang = 'en';
+
+function applyTranslations(l){
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const k = el.getAttribute('data-i18n');
+    if(k in T[l]) el.textContent = T[l][k];
+  });
+  document.querySelectorAll('[data-i18n-h]').forEach(el => {
+    const k = el.getAttribute('data-i18n-h');
+    if(k in T[l]) el.innerHTML = T[l][k];
+  });
+  document.querySelectorAll('[data-i18n-span]').forEach(el => {
+    const k = el.getAttribute('data-i18n-span');
+    if(k in T[l]) el.innerHTML = T[l][k];
+  });
+  document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+    const k = el.getAttribute('data-i18n-ph');
+    if(k in T[l]) el.placeholder = T[l][k];
+  });
+  document.querySelectorAll('.hero-line').forEach(line => {
+    const inner = line.querySelector('[data-i18n-span]');
+    const text = inner ? inner.textContent.trim() : '';
+    line.style.display = text ? '' : 'none';
+  });
+}
+
 function setLang(l){
   if(l === lang) return;
   lang = l;
   document.documentElement.lang = l === 'zh' ? 'zh' : 'en';
   document.querySelectorAll('.lb').forEach(b => b.classList.toggle('on', b.dataset.lang === l));
-  // Apply translations with fade
   document.body.style.opacity = '0.6';
   setTimeout(() => {
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-      const k = el.getAttribute('data-i18n');
-      if(T[l][k]) el.textContent = T[l][k];
-    });
-    document.querySelectorAll('[data-i18n-h]').forEach(el => {
-      const k = el.getAttribute('data-i18n-h');
-      if(T[l][k]) el.innerHTML = T[l][k];
-    });
-    document.querySelectorAll('[data-i18n-span]').forEach(el => {
-      const k = el.getAttribute('data-i18n-span');
-      if(T[l][k]) el.innerHTML = T[l][k];
-    });
-    document.querySelectorAll('[data-i18n-ph]').forEach(el => {
-      const k = el.getAttribute('data-i18n-ph');
-      if(T[l][k]) el.placeholder = T[l][k];
-    });
-    document.querySelectorAll('.hero-line').forEach(line => {
-      const inner = line.querySelector('[data-i18n-span]');
-      const text = inner ? inner.textContent.trim() : '';
-      line.style.display = text ? '' : 'none';
-    });
+    applyTranslations(l);
     document.body.style.opacity = '1';
   }, 180);
+}
+
+function closeMobileNav(){
+  document.getElementById('navLinks')?.classList.remove('open');
+  document.getElementById('navOverlay')?.classList.remove('open');
+  document.body.classList.remove('nav-open');
+}
+
+function toggleMobileNav(){
+  const open = document.getElementById('navLinks')?.classList.toggle('open');
+  document.getElementById('navOverlay')?.classList.toggle('open', open);
+  document.body.classList.toggle('nav-open', open);
 }
 
 // ─────────────────────────────────────────────────────────────────
 // PAGE ROUTING (SPA)
 // ─────────────────────────────────────────────────────────────────
 function showPage(name){
+  closeMobileNav();
   // Hide all
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   // Show target
@@ -473,6 +490,13 @@ document.addEventListener('mousemove', e => {
 // ─────────────────────────────────────────────────────────────────
 // INIT
 // ─────────────────────────────────────────────────────────────────
+document.addEventListener('keydown', e => {
+  if(e.key === 'Escape') closeMobileNav();
+});
+
 window.addEventListener('load', () => {
   initReveals();
+});
+window.addEventListener('resize', () => {
+  if(window.innerWidth > 1023) closeMobileNav();
 });

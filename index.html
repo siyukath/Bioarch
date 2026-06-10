@@ -16,6 +16,7 @@
 <div class="spb" id="spb"></div>
 
 <!-- NAV -->
+<div class="nav-overlay" id="navOverlay" onclick="closeMobileNav()"></div>
 <nav id="nav">
   <div class="nv">
     <a href="#" class="logo" onclick="showPage('home');return false;">
@@ -25,7 +26,10 @@
       </svg>
       BioArch
     </a>
-    <div class="nl">
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle menu" onclick="toggleMobileNav()">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nl" id="navLinks">
       <a href="#" onclick="showPage('approach');return false;" data-page="approach" data-i18n="nav.approach">Approach</a>
       <a href="#" onclick="showPage('focus');return false;" data-page="focus" data-i18n="nav.focus">Therapeutic Focus</a>
       <a href="#" onclick="showPage('insights');return false;" data-page="insights" data-i18n="nav.insights">Insights</a>
