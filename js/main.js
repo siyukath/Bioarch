@@ -10,6 +10,7 @@ en: {
   'hero.l1':'Where US innovation','hero.l2':"meets China's",'hero.l3':'<strong>accelerated</strong>','hero.l4':'pathways.',
   'hero.sub':"BioArch is a specialist advisory firm helping US biotech innovators bring breakthrough therapies to Chinese patients — through Hainan Lecheng's real-world study pathway, augmented by AI intelligence.",
   'hero.s1':'Partner-led engagements','hero.s2':'NDA-first conversations','hero.s3':'Response within 24 hours',
+  'hero.cta':'Begin a conversation',
   'dna.label':'/ Double Helix · Scientific Visualization',
   // stats
   'stats.ey':'/ Market Context · Q2 2026',
@@ -159,9 +160,10 @@ zh: {
   'nav.approach':'方法论','nav.focus':'治疗领域','nav.insights':'洞察','nav.about':'关于','nav.cta':'联系我们',
   // hero
   'hero.ey':'/ 中美跨境生物医药咨询 · 2026',
-  'hero.l1':'让全球创新疗法<strong>更快抵达</strong>','hero.l2':'中国患者。','hero.l3':'','hero.l4':'',
+  'hero.l1':'让全球创新疗法','hero.l2':'<strong>更快抵达</strong>','hero.l3':'中国患者。','hero.l4':'',
   'hero.sub':'拜驰生物（BioArch）是一家专注中美跨境的生物医药咨询机构。依托海南乐城真实世界研究通道、AI辅助的资产匹配，以及一支在中美两端都做过药的合伙人团队，我们帮美国创新药企用最高效、最稳妥的方式进入中国市场。',
   'hero.s1':'合伙人亲自对接','hero.s2':'保密协议先行','hero.s3':'24小时内响应',
+  'hero.cta':'联系我们',
   'dna.label':'/ 双螺旋 · 科学可视化',
   // stats
   'stats.ey':'/ 市场背景 · 2026年二季度',
