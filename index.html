@@ -26,19 +26,21 @@
       </svg>
       BioArch
     </a>
-    <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle menu" onclick="toggleMobileNav()">
-      <span></span><span></span><span></span>
-    </button>
     <div class="nl" id="navLinks">
       <a href="#" onclick="showPage('approach');return false;" data-page="approach" data-i18n="nav.approach">Approach</a>
       <a href="#" onclick="showPage('focus');return false;" data-page="focus" data-i18n="nav.focus">Therapeutic Focus</a>
       <a href="#" onclick="showPage('insights');return false;" data-page="insights" data-i18n="nav.insights">Insights</a>
       <a href="#" onclick="showPage('about');return false;" data-page="about" data-i18n="nav.about">About</a>
       <a href="#" onclick="showPage('contact');return false;" class="ncta" data-i18n="nav.cta">Begin a conversation</a>
+    </div>
+    <div class="nv-controls">
       <div class="lsw">
         <button class="lb on" data-lang="en" onclick="setLang('en')">EN</button>
         <button class="lb" data-lang="zh" onclick="setLang('zh')">中</button>
       </div>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle menu" onclick="toggleMobileNav()">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
 </nav>
